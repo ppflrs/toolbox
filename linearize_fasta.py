@@ -3,7 +3,7 @@
 import sys
 import argparse
 
-arg_parser = argparse.ArgumentParser(description='Batch salmon mapping.')
+arg_parser = argparse.ArgumentParser(description='Linearize a FASTA file.')
 arg_parser.add_argument("--tab", "-t", action="store_true", help='Print sequences in tab separated format.')
 arg_parser.add_argument("input_file",type=str, help='<input_file> full path to fasta file.')
 
