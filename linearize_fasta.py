@@ -55,4 +55,3 @@ with open(infile, 'rt') as fh:
                                 else:
                                         seq += line.strip()
 			print("{0}\t{1}".format(header, seq))
-                        print("{0}\t{1}\t{2}".format(header, seq_len, seq))
