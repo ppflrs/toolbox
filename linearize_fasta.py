@@ -2,6 +2,7 @@
 
 import sys
 import argparse
+import os
 
 arg_parser = argparse.ArgumentParser(description='Linearize a FASTA file and print to the standard output.')
 arg_parser.add_argument("--tab", "-t", action="store_true", help='Print sequences in tab separated format.')
@@ -22,10 +23,10 @@ if rename_seqs_file != None:
     rename_seqs = True
     if rename_seqs_file == infile:
         sys.exit("Warning: This will delete the input file, please change the renamed headers mapping file.")
-    try:
-        open(rename_seqs_file, 'x')
-    except FileExistsError:
+    if os.path.exists(rename_seqs_file):
         sys.exit("Error: The file to store the renamed headers already exists.")
+    else:
+        open(rename_seqs_file, 'a')
 else:
     rename_seqs = False
     rename_seqs_file = False
