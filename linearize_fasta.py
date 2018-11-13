@@ -7,7 +7,7 @@ import os
 arg_parser = argparse.ArgumentParser(description='Linearize a FASTA file and print to the standard output.')
 arg_parser.add_argument("--tab", "-t", action="store_true", help='Print sequences in tab separated format.')
 arg_parser.add_argument("--len", "-l", action="store_true", help='Print lenght of sequence after the sequence header. Only for tab separated format.')
-arg_parser.add_argument("--min_len", "-ml", type=int, help='Prints sequences wich lenght is bigger than --min-len.')
+arg_parser.add_argument("--min_len", "-ml", type=int, help='Prints sequences which lenght is bigger than --min-len.')
 arg_parser.add_argument("--rename", "-r", type=str, help='<tsv_file> Rename the headers to "seq_1, seq_2, etc." format. The original headers are stored in tsv_file.')
 arg_parser.add_argument("input_file",type=str, help='<input_file> full path to fasta file.')
 
